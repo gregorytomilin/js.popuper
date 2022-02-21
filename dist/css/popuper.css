@@ -1,0 +1,134 @@
+
+.popuperWrap {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #00000091;
+  z-index: 99999;
+}
+
+.popuperWrap *::-webkit-scrollbar {
+  width: 10px;
+  background-color: #e8e8e8;
+}
+
+.popuperWrap *::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+  width: 6px;
+}
+
+.popuper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: max-content;
+  width: max-content;
+  max-width: 500px;
+  min-width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 90vh;
+  animation: appearance 0.2s ease;
+}
+.popuper__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px 20px 10px;
+  background: white;
+}
+.popuper__title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.popuper__text {
+  max-height: 60vh;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  overflow: auto;
+}
+.popuper__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+  overflow-y: auto;
+}
+.popuper__close {
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+}
+.popuper__close svg {
+  width: 25px;
+  height: 25px;
+}
+.popuper__controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 20px 10px;
+  background: white;
+}
+.popuper button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #d7d7d7;
+  color: #1a1a1a;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.popuper button:hover {
+  background: #bbbbbb;
+}
+
+.--fixed {
+  overflow-y: hidden;
+}
+
+@keyframes appearance {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .popuper {
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+  .popuper__header {
+    padding: 10px 15px;
+  }
+  .popuper__body {
+    overflow: auto;
+    padding: 10px 20px 10px;
+  }
+  .popuper__text {
+    max-height: none;
+    margin-bottom: 20px;
+  }
+  .popuper__controls {
+    padding: 10px 20px 10px;
+  }
+}

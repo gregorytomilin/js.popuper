@@ -1,0 +1,31 @@
+{
+  "name": "js.popuper",
+  "version": "1.0.1",
+  "description": "CSS smart sticky position for exceeding aside blocks",
+  "main": "dist/js/popuper.js",
+  "scripts": {
+    "build": "gulp script"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.7"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "keywords": [
+    "popUp",
+    "popUper",
+    "js",
+    "window",
+    "pops"
+  ],
+  "author": "Gregory Tomilin",
+  "license": "ISC"
+}
