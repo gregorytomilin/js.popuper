@@ -1,6 +1,6 @@
 {
   "name": "js.popuper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CSS smart sticky position for exceeding aside blocks",
   "main": "dist/js/popuper.js",
   "scripts": {
