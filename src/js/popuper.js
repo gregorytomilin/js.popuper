@@ -86,6 +86,9 @@ class PopUper {
 
                 let controlElement = this.createEl('button');
                 controlElement.innerHTML = control.title;
+                if(control.style){
+                    controlElement.classList.add(control.style);
+                }
 
                 controlElement.addEventListener('click', ()=>{
                     if(control.action){

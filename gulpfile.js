@@ -1,6 +1,6 @@
 // .pipe(rename({suffix: ".min"}))
 'use strict';
-const { src, dest, task } = require("gulp");
+const { src, dest, task, watch, series } = require("gulp");
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
@@ -32,3 +32,10 @@ task("js", function() {
       .pipe(uglify())
       .pipe(dest("dist/js"));
 });
+
+task('watch', ()=>{
+
+  watch(['src/scss/**/*.scss'],series(['scss']));
+  watch(['src/js/**/*.js'], series(['js']));
+
+})
